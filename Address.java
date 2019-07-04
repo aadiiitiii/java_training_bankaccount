@@ -46,6 +46,7 @@ public class Address {
 	}
 	
 	public void displayAddress() {
+		System.out.println("The address is: ");
 		System.out.println(this.name+", "+this.hno+", "+this.society+", "+this.pincode);
 	}
 }

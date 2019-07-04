@@ -17,9 +17,11 @@ public class GeneratorClass {
 		
 		int opt=1;
 		do {
-			System.out.println("Menu \n 1. Add money \n 2. Withdraw money \n 3. Check balance \n 4. Add address \n 5. Display address");
+			System.out.println("----------------------------------");
+			System.out.println("Menu \n 1. Add money \n 2. Withdraw money \n 3. Check balance \n 4. Add address \n 5. Display address \n 6. Display all information");
 			System.out.println("Your option: ");
 			option= sc.nextInt();
+			System.out.println("----------------------------------");
 			switch(option) {
 				case 1:
 					System.out.println("Enter amount to be added: ");
@@ -53,8 +55,13 @@ public class GeneratorClass {
 					address.setPincode(pincode);
 					break;
 				case 5:
-					System.out.println("The address is: ");
 					address.displayAddress();
+					break;
+				case 6:
+					System.out.println("User id is: "+userid);
+					user.checkAccountType(acc_type);
+					address.displayAddress();
+					user.checkBalance();
 					break;
 			}
 			System.out.println("Do you want to continue?(1-yes,0-no)");
